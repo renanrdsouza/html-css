@@ -41,6 +41,11 @@ header a {
     color: white;
     font-weight: bold;
     text-decoration: none;
+    transition-duration: 1s;
+}
+
+header a:hover {
+    text-decoration: underline;
 }
 
 main {
@@ -52,7 +57,7 @@ main {
 main div {
     padding-top: 100px;
     padding-bottom: 100px;
-    padding-left: 50px;
+    padding-left: 30px;
     font-family: var(--fonte-paragrafo);
     font-size: 1.5em;
 }
@@ -104,6 +109,10 @@ footer a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
 
 footer p {
