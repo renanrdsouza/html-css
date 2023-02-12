@@ -54,7 +54,7 @@ main {
     margin: auto;
 }
 
-main div {
+main section {
     padding-top: 100px;
     padding-bottom: 100px;
     padding-left: 30px;
@@ -62,25 +62,25 @@ main div {
     font-size: 1.5em;
 }
 
-div.primeira-estrofe {
+section.primeira-estrofe {
     background-color: white;
 }
 
-div.segunda-estrofe {
+section.segunda-estrofe {
     background: black url('../imagens/background001.jpg') right center no-repeat fixed;
     background-size: cover;
 }
 
-div.terceira-estrofe {
+section.terceira-estrofe {
     background-color: white;
 }
 
-div.quarta-estrofe {
+section.quarta-estrofe {
     background: black url('../imagens/background002.jpg') center center no-repeat fixed;
     background-size: cover;
 }
 
-div.quinta-estrofe {
+section.quinta-estrofe {
     background-color: white;
 }
 
