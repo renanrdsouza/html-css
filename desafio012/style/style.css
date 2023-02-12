@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
 
 :root {
-    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-padrao: Verdana, Geneva, Tahoma, sans-serif;
     --fonte-destaque:'Passion One', 'cursive'; 
     --fonte-paragrafo: 'Sriracha', 'cursive';
 }
@@ -14,7 +14,8 @@
     padding: 0px;
 }
 
-body {
+html, body {
+    min-height: 100vh;
     background-color: black;
 }
 
@@ -23,28 +24,30 @@ header {
     text-align: center;
     margin: auto;
     padding-top: 40px;
-    padding-bottom: 40px;
 }
 
 header h1 {
     font-family: var(--fonte-destaque);
-    font-size: 3em;
+    font-size: 6vw;
+    font-variant: small-caps;
     color: white;
+    padding-top: 40px;
 }
 
 header p {
     font-family: var(--fonte-padrao);
     color: white;
+    padding-bottom: 40px;
 }
 
-header a {
+header a, footer a {
     color: white;
     font-weight: bold;
     text-decoration: none;
     transition-duration: 1s;
 }
 
-header a:hover {
+header a:hover, footer a:hover {
     text-decoration: underline;
 }
 
@@ -54,47 +57,49 @@ main {
     margin: auto;
 }
 
-main section {
-    padding-top: 100px;
-    padding-bottom: 100px;
+section {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
     padding-left: 30px;
     font-family: var(--fonte-paragrafo);
     font-size: 1.5em;
+    line-height: 2em;
 }
 
-section.primeira-estrofe {
+section.normal {
     background-color: white;
-}
-
-section.segunda-estrofe {
-    background: black url('../imagens/background001.jpg') right center no-repeat fixed;
-    background-size: cover;
-}
-
-section.terceira-estrofe {
-    background-color: white;
-}
-
-section.quarta-estrofe {
-    background: black url('../imagens/background002.jpg') center center no-repeat fixed;
-    background-size: cover;
-}
-
-section.quinta-estrofe {
-    background-color: white;
-}
-
-p.impar {
     color: black;
+}
+
+section.imagem {
+    background-size: cover;
+    color: white;
+    box-shadow: inset 6px 6px 13px rgba(0, 0, 0, 0.438);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+section.normal p {
     display: inline-block;
+    color: black;
     padding: 20px;
 }
 
-p.par {
+section.imagem p {
     display: inline-block;
     padding: 20px;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.199);
+    background-color: rgba(0, 0, 0, 0.301);
+    text-shadow: 1px 1px 0px black;
+}
+
+section#img01 {
+    background-image: url('../imagens/background001.jpg');
+    background-position: right center;
+    
+}
+
+section#img02 {
+    background-image: url('../imagens/background002.jpg');
 }
 
 footer {
@@ -103,16 +108,6 @@ footer {
     padding: 10px;
     color: white;
     border-top: 1px solid white;
-}
-
-footer a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-footer a:hover {
-    text-decoration: underline;
 }
 
 footer p {
