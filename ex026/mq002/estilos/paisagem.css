@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+/*Tela deitada*/
+
+body {
+    background: url('../imagens/cev-landscape.jpg') center bottom no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+    
+    
