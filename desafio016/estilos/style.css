@@ -89,7 +89,7 @@ div.inputs > input {
     height: 100%;
     border-radius: 8px;
     padding: 4px;
-    transform: translatey(-12px);
+    transform: translate(0px, -12px);
 }
 
 div.inputs > i{
