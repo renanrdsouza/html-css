@@ -70,14 +70,13 @@ nav a {
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
-    padding: 5px; /*quando passar o mouse nos links o botão vai aumentar pois o padding do hover está maior*/
-    transition-duration: 0.5s; /*determina quanto tempo irá durar a transição do efeito hover*/
+    padding: 5px; 
+    transition-duration: 0.5s;
 }
 
 nav a:hover {
     color: var(--cor5);
     background-color: var(--cor3);
-    padding: 10px; /*como o padding aqui no hover está maior que no nav a sem hover, ao passar o mouse vai dar a sensação de que o botão está aumentando*/
 }
 
 main {
