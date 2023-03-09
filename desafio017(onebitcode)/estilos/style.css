@@ -11,140 +11,188 @@
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    align-items: center;
 }
 
 .header {
     display: flex;
-    background-color: rgb(57, 56, 56);
-    min-width: 280px;
-    padding: 10px;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    gap: 8px 15px;
+    background-color: #292929;
+    width: 100%;
+    min-height: 40px;
+    padding: 30px;
 }
 
-.header img {
-    height: 50px;
+.logoNavBar {
+    width: 180px;
 }
 
-.buttons a {
-    text-decoration: none;
+.headerBtnGroup {
+    display: flex;
+    gap: 15px;
+}
+
+.navbarBtn {
+    font-size: 16px;
+    padding: 6px;
+    background-color: transparent;
+    border: 2px solid transparent;
     color: white;
-    padding: 10px;
+    cursor: pointer;
     transition: 0.5s;
-    border-bottom: 2px solid transparent;
 }
 
-.buttons a:hover {
+.navbarBtn:hover {
     border-bottom: 2px solid black;
 }
 
-.main-content {
+.sectionTitle {
+    text-align: center;
+    font-size: 26px;
+    padding-top: 20px;
+}
+
+.sectionDescription {
+    text-align: center;
+    color: #383838;
+}
+
+.gridContainer {
     flex: 1 0 auto;
     display: grid;
-    max-width: 1400px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-auto-rows: minmax(80px, auto);
+    grid-template-columns: 3fr 1fr; /*mainContent vai ocupar 3 frames e o sideBar vai ocupar 1 frame*/
+    grid-auto-rows: minmax(100px, auto);
     grid-template-areas: 
-    "item1 item1 item1"
-    "item2 item2 item3"
-    "item2 item2 item3"
-    "item2 item2 item3";
+    "mainContent sidebarContent";
+    padding: 20px;
 }
 
-.main-content h1, p {
-    text-align: center;
-}
-
-.items {
+.mainContent {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.subitem {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    border-radius: 5px;
-    align-items: flex-start;
-    justify-content: flex-start;
-}
-
-.subitem p {
-    text-align: left;
-}
-
-div#item1 {
-    grid-area: item1;
-    align-self: flex-start;
-}
-
-div#item2 {
-    display: flex;
-    grid-area: item2;
-    flex-direction: row;
     flex-wrap: wrap;
-    gap: 15px 10px;
+    justify-content: center;
+    gap: 10px;
+    grid-area: mainContent;
 }
 
-.subitem {
-    display: flex;
-    background-color: gray;
+.mainCategoryImage {
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
 }
 
-div#item3 {
+.categoryCard {
+    width: 280px;
+    height: 380px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.categoryCard:hover {
+    border-color: black;
+}
+
+.mainCategoryTitle {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 6px;
+}
+
+.mainCategoryDescription {
+    padding: 6px;
+}
+
+.sidebarContent {
+    background-color: #383838;
+    color: white;
+    padding: 16px;
     display: flex;
     flex-direction: column;
-    max-width: 400px;
-    grid-area: item3;
-    background-color: rgb(65, 65, 65);
-    color: white;
+    align-items: center;
+    min-width: 300px;
+    grid-area: sidebarContent;
+    gap: 20px;
 }
 
-.extras {
-    min-height: 200px;
+.sidebarCard {
+    width: 75%;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.sideBarCardTitle {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 10px;
+}
+
+.siderBarCardImg {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.sidebarCard:hover {
+    border-color: gainsboro;
 }
 
 .footer {
+    width: 100%;
+    min-height: 40px;
+    background-color: #292929;
     display: flex;
-    min-width: 280px;
-    background-color: rgb(57, 56, 56);
-    padding: 10px;
+    flex-wrap: wrap;
+    padding: 30px;
+    gap: 15px;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
 }
 
-.footer img {
-    height: 50px;
+.logoFooter {
+    width: 180px;
 }
 
-.footer a {
+.footer-anchor {
     text-decoration: none;
     color: white;
     border-bottom: 2px solid transparent;
     transition: 0.5s;
 }
 
-.footer a:hover {
+.footer-anchor:hover {
     border-bottom: 2px solid black;
 }
 
-@media (max-width: 490px) {
+@media (max-width: 630px) {
+    .gridContainer {
+        grid-template-areas: 
+        "mainContent"
+        "sidebarContent";
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .sidebarContent {
+        min-width: auto;
+    }
+
+    .footer-anchor {
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 463px) {
     .header {
         justify-content: center;
         align-items: center;
     }
 
-    .buttons {
-        margin-top: 10px;
-    }
-}
-
-@media (max-width: 450px) {
     .footer {
         justify-content: center;
         align-items: center;
